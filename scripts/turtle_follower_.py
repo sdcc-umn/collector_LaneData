@@ -90,7 +90,7 @@ class ARTagFollow:
 				cv2.imwrite(self.dir_+str('images/')+str(self.i)+'.jpg', self.original)
 				self.i += 1
 
-			if key == ord("r"):
+			if key == ord("r") or key==ord("d"):
                 		base_cmd = Twist()
 				base_cmd.angular.z = 0.4
 				self.cmd_pub.publish(base_cmd)
@@ -99,7 +99,7 @@ class ARTagFollow:
 				cv2.imwrite(self.dir_+str('images/')+str(self.i)+'.jpg', self.original)
 				self.i += 1
 
-			if key == ord("l"):
+			if key == ord("l") or key==ord("a"):
                 		base_cmd = Twist()
 				base_cmd.angular.z = -0.4
 				self.cmd_pub.publish(base_cmd)
