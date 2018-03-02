@@ -85,7 +85,7 @@ class ARTagFollow:
                 		base_cmd = Twist()
 				base_cmd.linear.x = 0.2
 				self.cmd_pub.publish(base_cmd)
-				annotn_txt = str(self.i)+str('.jpg v 0.2 \n')
+				annotn_txt = str(self.i)+str('.jpg 0.0 0.2 \n')
 				self.annot_file.write(annotn_txt)
 				cv2.imwrite(self.dir_+str('images/')+str(self.i)+'.jpg', self.original)
 				self.i += 1
@@ -94,7 +94,7 @@ class ARTagFollow:
                 		base_cmd = Twist()
 				base_cmd.angular.z = 0.4
 				self.cmd_pub.publish(base_cmd)
-				annotn_txt = str(self.i)+str('.jpg a 0.4 \n')
+				annotn_txt = str(self.i)+str('.jpg 0.4 0.0 \n')
 				self.annot_file.write(annotn_txt)
 				cv2.imwrite(self.dir_+str('images/')+str(self.i)+'.jpg', self.original)
 				self.i += 1
@@ -103,7 +103,7 @@ class ARTagFollow:
                 		base_cmd = Twist()
 				base_cmd.angular.z = -0.4
 				self.cmd_pub.publish(base_cmd)
-				annotn_txt = str(self.i)+str('.jpg a -0.4 \n')
+				annotn_txt = str(self.i)+str('.jpg -0.4 0.0 \n')
 				self.annot_file.write(annotn_txt)
 				cv2.imwrite(self.dir_+str('images/')+str(self.i)+'.jpg', self.original)
 				self.i += 1
